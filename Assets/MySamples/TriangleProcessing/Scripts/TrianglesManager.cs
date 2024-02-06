@@ -14,15 +14,12 @@ namespace MySamples.TriangleProcessing.Scripts
             _instanceNumber = 15;
             
             for (var i = 0; i < _instanceNumber; i++)
-            {
                 StartCoroutine(WaitAndInstantiate(i * 0.5f));
-            }
         }
         
         private IEnumerator WaitAndInstantiate(float seconds)
         {
             yield return new WaitForSeconds(seconds);
-
             Instantiate(trianglePrefab, this.transform);
         }
     }
